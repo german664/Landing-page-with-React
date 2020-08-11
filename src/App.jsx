@@ -18,7 +18,7 @@ function App() {
           description={lorem}
           buttonLabel="Call to Action"
         />
-        <div className="card-deck mb-3">
+        <div className="row row-cols-1 row-cols-md-4 mb-4">
           <MainCard />
         </div>
       </div>
