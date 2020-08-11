@@ -1,18 +1,28 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
+import Navbar from "./componentes/navbar";
+import Jumbotron from "./componentes/jumbotron";
+import MainCard from "./componentes/mainCard";
+import Footer from "./componentes/footer";
+
+let lorem =
+  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis exercitationem consectetur harum, recusandae qui et nemo eveniet. Officia ipsa ipsum minus sequi quia, quos itaque ullam praesentium ad corporis excepturi!";
 
 function App() {
   return (
     <>
-      <div className="App">
-        <h1 className="text-danger"> Prueba </h1>
-        <i className="fas fa-globe-europe"> </i>
+      <Navbar />
+      <div className="container-fluid px-5 d-block mt-5 pt-5">
+        <Jumbotron
+          title="A warm welcome"
+          description={lorem}
+          buttonLabel="Call to Action"
+        />
+        <div className="card-deck mb-3">
+          <MainCard />
+        </div>
       </div>
-      <div className="App">
-        <h1 className="text-danger"> Prueba </h1>
-        <i className="fas fa-globe-europe"> </i>
-      </div>
+      <Footer website="www.dogs.com" />
     </>
   );
 }
